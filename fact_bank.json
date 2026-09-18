@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "title": "The 529 Network Social Fact Bank",
+    "source_report": "The 529 Network, 2026 National 529 Survey, July 2026",
+    "governance": "One approved wording and one source location per statistic. National findings are distinct from state-specific rules. The 529 Network is the data source; ISS is downstream. No ranking or best-plan language.",
+    "status": "final",
+    "known_discrepancies": [
+      "Tax savings: p.42 states $439M (APPROVED for social use); p.7 summary states $413M. Do not mix."
+    ],
+    "cta_links": {
+      "find_your_state_plan": "REPLACE_WITH_PLAN_FINDER_URL",
+      "read_the_report": "REPLACE_WITH_REPORT_URL",
+      "explore_529_at_work": "REPLACE_WITH_EMPLOYER_URL",
+      "use_share_resources": "REPLACE_WITH_RESOURCES_URL",
+      "share_use_the_toolkit": "REPLACE_WITH_MEMBER_KIT_URL",
+      "learn_how_to_contribute": "REPLACE_WITH_GIFTING_URL"
+    }
+  },
+  "campaign_findings": [
+    {
+      "id": "invest-275",
+      "headline": "$275M",
+      "approved_statement": "State 529 plans and their partners invest almost $275 million directly into 529 accounts to help families save for education.",
+      "source": "Summary of Findings, p.7",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "National topline. Combines several program types across states.",
+      "notes": "Headline invest figure; component non-tax incentives round to about $220M."
+    },
+    {
+      "id": "tax-savings-439",
+      "headline": "$439M+",
+      "approved_statement": "529 participation is tied to more than $439 million in state tax savings, through personal income tax deductions and credits.",
+      "source": "Section 5, p.42",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "Tax benefits differ by state; seven states have no personal income tax. Conservative estimate (report endnote 10).",
+      "notes": "Approved topline set to $439M per Ahmed/Catherine. Summary p.7 states $413M for the same measure; retained as a known variant, not for social use."
+    },
+    {
+      "id": "financial-incentives-220",
+      "headline": "$220.6M",
+      "approved_statement": "In 2024, state plans and their partners invested $220.6 million in financial incentives for opening and contributing to 529 accounts.",
+      "source": "Section 3, p.12-13",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "State plans & administrators",
+      "primary_cta": "Share / use the toolkit",
+      "qualifier": "National topline. Includes matching grants, initial contributions, and other direct incentives.",
+      "notes": "p.7 summary rounds to $220M non-tax incentives."
+    },
+    {
+      "id": "matching-grants-12",
+      "headline": "12 states / $21.4M",
+      "approved_statement": "Twelve states offer matching-grant programs, investing $21.4 million to match family contributions in 2024.",
+      "source": "Section 3, p.13",
+      "pillar": "3. Across the States",
+      "template_type": "STATE SPOTLIGHT",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Match rates, caps, and eligibility differ by state.",
+      "notes": "Seven states use 1:1; five use other methods."
+    },
+    {
+      "id": "initial-contributions-11",
+      "headline": "11 states",
+      "approved_statement": "Eleven states provide initial contributions that help start a 529 account, some automatically for children born or entering school in the state.",
+      "source": "Section 3, p.20-21",
+      "pillar": "3. Across the States",
+      "template_type": "STATE SPOTLIGHT",
+      "primary_audience": "Grandparents & extended family",
+      "primary_cta": "Learn how to contribute",
+      "qualifier": "Programs, amounts, and eligibility differ by state.",
+      "notes": "Amounts range $50 to $500."
+    },
+    {
+      "id": "minimum-25-41",
+      "headline": "41 states",
+      "approved_statement": "Forty-one states have a minimum initial contribution of $25 or less to open a 529 account, and many have no minimum at all.",
+      "source": "Section 4, p.32-33 (Figure 13)",
+      "pillar": "1. 529 Made Simple",
+      "template_type": "MYTH / FACT",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Minimums differ by state; some advisor-sold plans have higher minimums.",
+      "notes": "Strategy anchor fact for the atomization example."
+    },
+    {
+      "id": "access-34-32-23",
+      "headline": "34 / 32 / 23",
+      "approved_statement": "34 states report targeted rural outreach, 32 accept ITINs as account-owner identification, and 23 provide plan information in Spanish.",
+      "source": "Section 4, p.36-38 (Figure 16)",
+      "pillar": "1. 529 Made Simple",
+      "template_type": "ACCESS",
+      "primary_audience": "Educators & access partners",
+      "primary_cta": "Use / share resources",
+      "qualifier": "Availability and services differ by state.",
+      "notes": "Spanish figure is 23 of responding states."
+    },
+    {
+      "id": "financial-education-27",
+      "headline": "27 states",
+      "approved_statement": "A majority of responding states (27) provide financial education for current and prospective 529 account owners.",
+      "source": "Section 4, p.41 (Figure 19)",
+      "pillar": "4. Education Paths",
+      "template_type": "PEOPLE & PARTNERSHIPS",
+      "primary_audience": "Educators & access partners",
+      "primary_cta": "Use / share resources",
+      "qualifier": "Offerings differ by state."
+    },
+    {
+      "id": "college-access-17",
+      "headline": "17 states / $21M",
+      "approved_statement": "Seventeen states reported college-access partnerships; where savings data are available, those 529 accounts held more than $21 million.",
+      "source": "Section 6, p.54-55 (Figure 27)",
+      "pillar": "5. People & Partnerships",
+      "template_type": "PARTNERSHIPS",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "Partnership models differ by state; savings outcomes are not always reported."
+    },
+    {
+      "id": "local-partnerships-18",
+      "headline": "18 states",
+      "approved_statement": "Eighteen states reported local savings partnerships, identifying at least 32 partnerships and more than $4.1 million in incentives in 2024.",
+      "source": "Section 7, p.58-59 (Figure 29)",
+      "pillar": "5. People & Partnerships",
+      "template_type": "PARTNERSHIPS",
+      "primary_audience": "State plans & administrators",
+      "primary_cta": "Share / use the toolkit",
+      "qualifier": "Conservative estimate; based on limited survey responses."
+    },
+    {
+      "id": "scholarships-288",
+      "headline": "$28.8M",
+      "approved_statement": "State 529 plans awarded more than $28.8 million in higher-education scholarships in 2024.",
+      "source": "Section 6, p.48-49 (Figure 24)",
+      "pillar": "5. People & Partnerships",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Scholarship programs and eligibility differ by state."
+    },
+    {
+      "id": "employer-tax-9",
+      "headline": "9 states",
+      "approved_statement": "Nine states provide a tax credit or deduction for employers that contribute to employees' 529 accounts.",
+      "source": "Section 5, p.46-47 (Figure 23)",
+      "pillar": "4. Education Paths",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Employers & benefits leaders",
+      "primary_cta": "Explore 529 at work",
+      "qualifier": "Employer benefit rules differ by state; total employer credits were about $429,000 in 2024."
+    }
+  ],
+  "state_spotlights": [
+    {
+      "id": "spotlight-calkids-ca",
+      "state": "California",
+      "program": "CalKIDS",
+      "headline": "$2.2B / 5M accounts",
+      "approved_statement": "California's CalKIDS automatically seeds a 529 account for every newborn and eligible public-school student; more than 5 million accounts held nearly $2.2 billion in assets as of June 2025.",
+      "source": "Section 3, p.21-22",
+      "pillar": "3. Across the States",
+      "template_type": "STATE SPOTLIGHT",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Eligibility and deposit amounts are state-specific."
+    },
+    {
+      "id": "spotlight-keystone-pa",
+      "state": "Pennsylvania",
+      "program": "Keystone Scholars",
+      "headline": "672,000 accounts / $67M",
+      "approved_statement": "Pennsylvania's Keystone Scholars gives every newborn a $100 starter deposit; more than 672,000 accounts were funded, totaling over $67 million as of June 2024.",
+      "source": "Section 3, p.24-25",
+      "pillar": "3. Across the States",
+      "template_type": "STATE SPOTLIGHT",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Funded by surplus investment earnings, not taxpayer funds. State-specific."
+    },
+    {
+      "id": "spotlight-tips-tn",
+      "state": "Tennessee",
+      "program": "TNStars TIPS",
+      "headline": "4:1 match",
+      "approved_statement": "Tennessee's TIPS program matches qualifying contributions 4:1 for eligible lower-income households, up to $500 per year.",
+      "source": "Section 3, p.18-19",
+      "pillar": "3. Across the States",
+      "template_type": "STATE SPOTLIGHT",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Income eligibility is state-specific; lifetime cap of $1,500."
+    },
+    {
+      "id": "spotlight-alfond-me",
+      "state": "Maine",
+      "program": "My Alfond Grant",
+      "headline": "$90M / 180,000 children",
+      "approved_statement": "Maine gives every resident newborn a $500 Alfond Grant; the program has invested over $90 million for more than 180,000 children since 2013.",
+      "source": "Section 3, p.22-23",
+      "pillar": "3. Across the States",
+      "template_type": "STATE SPOTLIGHT",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "State-specific; first statewide CSA program in the nation."
+    },
+    {
+      "id": "spotlight-soar-va",
+      "state": "Virginia",
+      "program": "SOAR Virginia",
+      "headline": "14,000 accounts / $19M",
+      "approved_statement": "Virginia's SOAR Virginia pairs early-commitment advising and financial literacy with scholarship funds held in 529 accounts; it has opened 14,000 accounts holding $19 million.",
+      "source": "Section 6, p.56-57",
+      "pillar": "5. People & Partnerships",
+      "template_type": "PARTNERSHIPS",
+      "primary_audience": "Educators & access partners",
+      "primary_cta": "Use / share resources",
+      "qualifier": "Eligibility and pledge requirements are state-specific."
+    },
+    {
+      "id": "spotlight-kidsrise-ny",
+      "state": "New York",
+      "program": "NYC Kids RISE",
+      "headline": "274,000 accounts / $50M+",
+      "approved_statement": "New York's NYC Kids RISE, the largest local savings partnership, reports over 274,000 accounts holding more than $50 million in college savings.",
+      "source": "Section 7, p.59",
+      "pillar": "5. People & Partnerships",
+      "template_type": "PARTNERSHIPS",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "Reported by NYC Kids RISE; not included in New York's survey results."
+    }
+  ],
+  "credibility_facts": [
+    {
+      "id": "response-rate-83",
+      "headline": "83% response rate",
+      "approved_statement": "The 2026 National 529 Survey drew responses from 43 states, including DC and the Private College 529 Plan, an 83 percent response rate.",
+      "source": "About the Study, p.6-7",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "Snapshot in time (2025 data); not directly comparable to the 2022 report."
+    }
+  ]
+}
