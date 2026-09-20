@@ -1,0 +1,19 @@
+{
+  "posts_per_week": 3,
+  "recency_days": 21,
+  "active_platforms": [
+    "Instagram",
+    "LinkedIn",
+    "Facebook"
+  ],
+  "primary_website_url": "",
+  "utm_campaign": "529_network_content",
+  "default_owner": "",
+  "pillar_targets": {
+    "1. 529 Made Simple": 30,
+    "2. Proof in Numbers": 20,
+    "3. Across the States": 20,
+    "4. Education Paths": 15,
+    "5. People & Partnerships": 15
+  }
+}

@@ -1,33 +1,28 @@
-"""Brand system for The 529 Network social engine.
-Single source of truth for colors, fonts, and asset paths.
-Change values here to retune the whole app."""
-
+"""Brand and strategy constants for The 529 Network Content Hub."""
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-FONT_DIR = ROOT / "fonts"
 ASSET_DIR = ROOT / "assets"
 
-# Colors. Greens and steel/mist are the stated brand palette; the leaf accent is
-# sampled from the logo cap. The gold accent is a proposed warm neutral and is
-# the one value awaiting confirmation.
 COLORS = {
-    "green":        "#3A8916",   # primary
-    "green_deep":   "#2B650B",   # deep green (footers, panels)
-    "green_bright": "#4C942D",   # leaf accent (from logo)
-    "steel":        "#708686",   # steel gray (wordmark family)
-    "mist":         "#C6DDBB",   # light mist green
-    "gold":         "#A8883C",   # warm gold accent  <-- confirm
-    "ink":          "#242A24",   # near-black text
-    "paper":        "#F4F6F1",   # light neutral background
-    "white":        "#FFFFFF",
+    "green": "#3A8916",
+    "green_deep": "#2B650B",
+    "green_bright": "#4C942D",
+    "steel": "#708686",
+    "mist": "#C6DDBB",
+    "gold": "#A8883C",
+    "ink": "#242A24",
+    "paper": "#F4F6F1",
+    "white": "#FFFFFF",
 }
 
+# Font names only. The distributable intentionally does not bundle font files.
+# Pillow will try these common system fonts and fall back safely if unavailable.
 FONTS = {
-    "regular":  str(FONT_DIR / "Archivo-Regular.ttf"),
-    "semibold": str(FONT_DIR / "Archivo-SemiBold.ttf"),
-    "bold":     str(FONT_DIR / "Archivo-Bold.ttf"),
-    "black":    str(FONT_DIR / "Archivo-Black.ttf"),
+    "regular": ["DejaVuSans.ttf", "Arial.ttf"],
+    "semibold": ["DejaVuSans-Bold.ttf", "Arial Bold.ttf", "DejaVuSans.ttf"],
+    "bold": ["DejaVuSans-Bold.ttf", "Arial Bold.ttf", "DejaVuSans.ttf"],
+    "black": ["DejaVuSans-Bold.ttf", "Arial Bold.ttf", "DejaVuSans.ttf"],
 }
 
 LOGOS = {
@@ -35,10 +30,9 @@ LOGOS = {
     "529_white": str(ASSET_DIR / "logo_529_white.png"),
     "nast_white": str(ASSET_DIR / "nast_white.png"),
     "nast_steel": str(ASSET_DIR / "nast_steel.png"),
-    "nast_dark":  str(ASSET_DIR / "nast_dark.png"),
+    "nast_dark": str(ASSET_DIR / "nast_dark.png"),
 }
 
-# Output sizes offered per platform.
 SIZES = {
     "Instagram portrait (1080x1350)": (1080, 1350),
     "Instagram / Facebook square (1080x1080)": (1080, 1080),
@@ -47,7 +41,6 @@ SIZES = {
     "Story / Reel cover (1080x1920)": (1080, 1920),
 }
 
-# Five content pillars and target monthly mix (from the strategy).
 PILLARS = {
     "1. 529 Made Simple": 30,
     "2. Proof in Numbers": 20,
@@ -56,19 +49,11 @@ PILLARS = {
     "5. People & Partnerships": 15,
 }
 
-# Feed balance (useful / community / organizational).
-FEED_BALANCE = {"Useful / educational": 70, "Community / member": 20, "Organizational": 10}
+CHANNELS = ["Instagram", "LinkedIn", "Facebook", "Other"]
+WORKFLOW = ["Draft", "Fact checked", "Communications review", "Approved", "Scheduled", "Published", "Archived", "Retired"]
 
-# Approval lanes.
-LANES = {
-    "GREEN": "Evergreen basics, previously approved copy, reposts, event photos. Fast approval.",
-    "AMBER": "Compendium numbers, state examples, tax or eligibility language. Data verification required.",
-    "RED": "Federal or state policy, legal or tax interpretation, controversy, corrections. Leadership review.",
-}
 
-# Which lane a template/pillar defaults to.
 def default_lane(template_type: str, pillar: str) -> str:
+    """Legacy compatibility helper; the new app uses explicit workflow status."""
     t = (template_type or "").upper()
-    if "MYTH" in t or "STATE" in t or "ACCESS" in t or "PARTNER" in t or "BIG NUMBER" in t:
-        return "AMBER"
-    return "GREEN"
+    return "AMBER" if any(x in t for x in ["MYTH", "STATE", "ACCESS", "PARTNER", "PEOPLE", "BIG NUMBER"]) else "GREEN"
