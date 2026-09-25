@@ -74,6 +74,12 @@ SETTINGS = storage.load_settings()
 CAMPAIGN = content_ops.ensure_campaign(DATA)
 
 
+@st.cache_data
+def load_state_series():
+    p = ROOT / "data" / "state_series.json"
+    return json.loads(p.read_text()) if p.exists() else {"source": "", "states": {}}
+
+
 def refresh_library():
     st.cache_data.clear()
     st.rerun()
@@ -145,7 +151,7 @@ st.sidebar.markdown("**CONTENT HUB**")
 st.sidebar.caption("Plan • Create • Approve • Amplify • Learn")
 PAGE = st.sidebar.radio(
     "Navigation",
-    ["Home", "Plan", "Content Library", "Create", "Calendar", "Approvals", "Member Toolkits", "Performance", "Settings"],
+    ["Home", "Plan", "Content Library", "Create", "State Snapshots", "Calendar", "Approvals", "Member Toolkits", "Performance", "Settings"],
     label_visibility="collapsed",
 )
 st.sidebar.caption(f"Storage: {storage.backend_name()}")
@@ -483,6 +489,48 @@ elif PAGE == "Create":
 
     package = content_package(fact, edited_outputs, graphic_text, theme, photo, rights_note)
     st.download_button("Download publication-ready package (.zip)", package, f"{cid}_content_package.zip", "application/zip", type="primary")
+
+
+
+# ================= STATE SNAPSHOTS =================
+elif PAGE == "State Snapshots":
+    st.header("State Snapshots")
+    st.caption("Factual disclosure of a single state's own 529 totals over time, the same way the plan finder discloses a home-state plan. This is not a comparison or ranking of plans.")
+    ss = load_state_series()
+    states = sorted(ss.get("states", {}).keys())
+    if not states:
+        st.info("State series data not found.")
+        st.stop()
+    c1, c2, c3 = st.columns(3)
+    state = c1.selectbox("State / jurisdiction", states)
+    metric = c2.radio("Metric", ["Assets", "Accounts"], horizontal=True)
+    theme = c3.selectbox("Theme", ["green", "light"])
+    rec = ss["states"][state]
+    if metric == "Assets":
+        series, unit = rec.get("aum_by_year", []), rec.get("aum_unit", "$B")
+    else:
+        series, unit = rec.get("accounts_by_year", []), rec.get("accounts_unit", "K")
+    if not series:
+        st.info(f"No {metric.lower()} series available for {state}.")
+        st.stop()
+    (fy, fv), (ly, lv) = series[0], series[-1]
+    yr = str(rec.get("latest", ""))[:4] or ly
+    if metric == "Assets":
+        stmt = f"In {state}, 529 accounts held about ${lv:g} billion as of {yr}, up from about ${fv:g} billion in {fy}."
+    else:
+        stmt = f"In {state}, families held about {lv:g}K 529 accounts as of {yr}, up from about {fv:g}K in {fy}."
+    qual = f"Factual disclosure of {state}'s own 529 totals. Not a comparison or ranking of plans."
+    size_name = st.selectbox("Size", list(brand.SIZES.keys()))
+    caption = st.text_area("Disclosure caption (editable)", f"{stmt} {qual} Source: {ss.get('source','')}.", height=90)
+    spec = {"template_type": "TREND", "headline": state, "statement": stmt, "graphic_text": stmt,
+            "source": ss.get("source", ""), "cta": "Find your state plan", "qualifier": qual,
+            "series": series, "series_unit": unit, "theme": theme, "size": brand.SIZES[size_name], "state": state}
+    if st.button("Render", type="primary"):
+        img = render.render(dict(spec))
+        buf = io.BytesIO(); img.save(buf, "PNG")
+        st.image(img, caption=f"{state} - {metric}", width="stretch")
+        st.download_button("Download PNG", buf.getvalue(), f"{state.replace(' ','_')}_{metric}.png", "image/png")
+    st.info("52 jurisdictions, assets and accounts, at five sizes are generated here on demand. Cross-state tables, rankings, and plan clusters are intentionally excluded to keep every output neutral.")
 
 
 # ================= CALENDAR =================

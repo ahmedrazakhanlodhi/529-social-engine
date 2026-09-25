@@ -62,3 +62,10 @@
 - Neutrality: national aggregates only. No state-level or plan-level asset figures and no K-means clusters, since ranking or tiering plans by size is the market-share-leaderboard pattern the neutrality rule rejects.
 - Provenance: attributed to The 529 Network (The Modern Record dataset), not ISS, which is the downstream recipient.
 - The 2030 forecast is not in this dataset and was not fabricated. It can be added as a clearly labeled projection if you supply the forecast values or approve a transparent method.
+
+## Content depth: per-state disclosure + more national angles
+
+- Added a State Snapshots page: factual disclosure of a single state's own 529 assets or accounts over time, for all 52 jurisdictions, rendered as an on-brand trend card at five sizes. That is 52 x 2 x 5 graphics generated on demand.
+- Framing is neutral by construction, one state at a time, the same principle as home-state disclosure in the plan finder. No cross-state tables, no rankings, no clusters.
+- Added three national facts (average account balance about $36K now vs $5.8K in 2001, 15M+ net-new accounts since 2001, assets passing half a trillion in 2024) and an average-balance trend series.
+- Verified: 104 state cards render with no failures, all ten pages boot clean.

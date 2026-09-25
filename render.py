@@ -285,10 +285,16 @@ def render(spec: dict) -> Image.Image:
         ex, ey = pts[-1]; r = max(7, int(W*.012))
         d.ellipse([ex-r, ey-r, ex+r, ey+r], fill=dot_col)
         def vlabel(v):
+            if unit == "$B":
+                return f"${v:g}B"
+            if unit == "$K":
+                return f"${v:g}K"
+            if unit == "K":
+                return f"{v:g}K"
+            if unit == "M" or "account" in unit.lower():
+                return f"{v:g}M"
             if unit.startswith("$"):
                 return f"${v:g}B"
-            if "account" in unit.lower():
-                return f"{v:g}M"
             return f"{v:g} {unit}".strip()
         endlbl = vlabel(ys[-1])
         ef = font("black", int(W*.045))

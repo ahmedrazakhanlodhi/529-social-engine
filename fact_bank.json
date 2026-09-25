@@ -465,9 +465,116 @@
     ],
     "unit": {
       "aum": "$B",
-      "accounts": "M accounts"
+      "accounts": "M accounts",
+      "avgbalance": "$K"
     },
-    "source": "The 529 Network, The Modern Record dataset (Q2 2026)"
+    "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+    "avgbalance_by_year": [
+      [
+        2001,
+        5.8
+      ],
+      [
+        2002,
+        6.1
+      ],
+      [
+        2003,
+        7.6
+      ],
+      [
+        2004,
+        9.0
+      ],
+      [
+        2005,
+        10.1
+      ],
+      [
+        2006,
+        11.4
+      ],
+      [
+        2007,
+        12.3
+      ],
+      [
+        2008,
+        9.4
+      ],
+      [
+        2009,
+        13.2
+      ],
+      [
+        2010,
+        15.6
+      ],
+      [
+        2011,
+        15.3
+      ],
+      [
+        2012,
+        17.2
+      ],
+      [
+        2013,
+        19.6
+      ],
+      [
+        2014,
+        20.5
+      ],
+      [
+        2015,
+        20.2
+      ],
+      [
+        2016,
+        21.4
+      ],
+      [
+        2017,
+        24.1
+      ],
+      [
+        2018,
+        22.5
+      ],
+      [
+        2019,
+        26.1
+      ],
+      [
+        2020,
+        28.7
+      ],
+      [
+        2021,
+        30.7
+      ],
+      [
+        2022,
+        25.6
+      ],
+      [
+        2023,
+        28.7
+      ],
+      [
+        2024,
+        31.0
+      ],
+      [
+        2025,
+        34.1
+      ],
+      [
+        2026,
+        36.0
+      ]
+    ]
   },
   "modern_record": [
     {
@@ -529,6 +636,42 @@
       "primary_cta": "Find your state plan",
       "qualifier": "Illustrates long-term national totals, not investment advice or expected returns.",
       "chart": "aum"
+    },
+    {
+      "id": "mr-avg-balance",
+      "headline": "~$36K per account",
+      "approved_statement": "The average 529 account held about $36,000 in mid-2026, up from roughly $5,800 in 2001.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "TREND",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "National totals across all state 529 plans. Past growth does not predict future returns.",
+      "chart": "avgbalance"
+    },
+    {
+      "id": "mr-net-new",
+      "headline": "15M+ new accounts",
+      "approved_statement": "Families have opened more than 15 million new 529 accounts since 2001.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "National totals across all state 529 plans.",
+      "chart": ""
+    },
+    {
+      "id": "mr-half-trillion",
+      "headline": "Half a trillion",
+      "approved_statement": "Nationwide 529 assets first passed half a trillion dollars in 2024 and have kept climbing since.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "National totals across all state 529 plans. Past growth does not predict future returns.",
+      "chart": ""
     }
   ]
 }
