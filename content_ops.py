@@ -15,7 +15,7 @@ CONTENT_TYPES = ["Compendium", "Evergreen FAQ", "Member Story", "Event / Timely"
 def load_fact_bank() -> tuple[dict, list[dict]]:
     data = json.loads((ROOT / "fact_bank.json").read_text())
     items = []
-    for group_key, group_label in [("campaign_findings", "Campaign finding"), ("state_spotlights", "State spotlight"), ("credibility_facts", "Credibility")]:
+    for group_key, group_label in [("campaign_findings", "Campaign finding"), ("state_spotlights", "State spotlight"), ("credibility_facts", "Credibility"), ("modern_record", "Modern record")]:
         for raw in data.get(group_key, []):
             f = dict(raw)
             f["_group"] = group_label
@@ -71,6 +71,7 @@ def norm(f: dict) -> dict:
         "campaign": f.get("campaign", ""),
         "content_type": f.get("content_type", "Compendium"),
         "timing": f.get("timing", "Evergreen"),
+        "chart": f.get("chart", ""),
     }
 
 

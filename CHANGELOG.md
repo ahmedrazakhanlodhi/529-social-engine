@@ -53,3 +53,12 @@
 - Settings now hold plan-finder, report, and employer URLs. Generated copy turns the call to action into a real UTM-tagged link when a URL exists, and stays plain text (no dead placeholder) when it does not.
 - Renderer: content is vertically balanced instead of top-heavy, and every data card carries a small bottom source line for provenance.
 - Home surfaces the source-control decisions from the fact bank (for example the $439M topline).
+
+## Content expansion: The Modern Record (529assets data)
+
+- Pulled the national assets-and-accounts panel from the 529-assets-accounts dataset (2001 to Q2 2026), reconciled to $653.6B and 18.17M accounts.
+- Added five national trend facts to the fact bank under Proof in Numbers and 529 Made Simple, each with approved wording, a provenance line, and a past-growth-is-not-a-forecast qualifier.
+- Added a TREND chart template: an on-brand area chart of national assets or accounts over time, with the latest value marked, at all five platform sizes.
+- Neutrality: national aggregates only. No state-level or plan-level asset figures and no K-means clusters, since ranking or tiering plans by size is the market-share-leaderboard pattern the neutrality rule rejects.
+- Provenance: attributed to The 529 Network (The Modern Record dataset), not ISS, which is the downstream recipient.
+- The 2030 forecast is not in this dataset and was not fabricated. It can be added as a clearly labeled projection if you supply the forecast values or approve a transparent method.

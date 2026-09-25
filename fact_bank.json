@@ -249,5 +249,286 @@
       "primary_cta": "Read / download the report",
       "qualifier": "Snapshot in time (2025 data); not directly comparable to the 2022 report."
     }
+  ],
+  "trend_series": {
+    "aum_by_year": [
+      [
+        2001,
+        13.6
+      ],
+      [
+        2002,
+        26.8
+      ],
+      [
+        2003,
+        45.8
+      ],
+      [
+        2004,
+        64.7
+      ],
+      [
+        2005,
+        82.5
+      ],
+      [
+        2006,
+        105.7
+      ],
+      [
+        2007,
+        129.9
+      ],
+      [
+        2008,
+        104.9
+      ],
+      [
+        2009,
+        133.7
+      ],
+      [
+        2010,
+        157.4
+      ],
+      [
+        2011,
+        164.9
+      ],
+      [
+        2012,
+        190.7
+      ],
+      [
+        2013,
+        227.1
+      ],
+      [
+        2014,
+        247.9
+      ],
+      [
+        2015,
+        253.2
+      ],
+      [
+        2016,
+        275.1
+      ],
+      [
+        2017,
+        319.1
+      ],
+      [
+        2018,
+        311.2
+      ],
+      [
+        2019,
+        371.5
+      ],
+      [
+        2020,
+        425.2
+      ],
+      [
+        2021,
+        480.4
+      ],
+      [
+        2022,
+        411.3
+      ],
+      [
+        2023,
+        471.2
+      ],
+      [
+        2024,
+        525.1
+      ],
+      [
+        2025,
+        602.9
+      ],
+      [
+        2026,
+        653.6
+      ]
+    ],
+    "accounts_by_year": [
+      [
+        2001,
+        2.35
+      ],
+      [
+        2002,
+        4.38
+      ],
+      [
+        2003,
+        6.02
+      ],
+      [
+        2004,
+        7.21
+      ],
+      [
+        2005,
+        8.19
+      ],
+      [
+        2006,
+        9.27
+      ],
+      [
+        2007,
+        10.55
+      ],
+      [
+        2008,
+        11.18
+      ],
+      [
+        2009,
+        10.11
+      ],
+      [
+        2010,
+        10.09
+      ],
+      [
+        2011,
+        10.74
+      ],
+      [
+        2012,
+        11.09
+      ],
+      [
+        2013,
+        11.56
+      ],
+      [
+        2014,
+        12.09
+      ],
+      [
+        2015,
+        12.54
+      ],
+      [
+        2016,
+        12.87
+      ],
+      [
+        2017,
+        13.26
+      ],
+      [
+        2018,
+        13.83
+      ],
+      [
+        2019,
+        14.26
+      ],
+      [
+        2020,
+        14.81
+      ],
+      [
+        2021,
+        15.67
+      ],
+      [
+        2022,
+        16.04
+      ],
+      [
+        2023,
+        16.43
+      ],
+      [
+        2024,
+        16.96
+      ],
+      [
+        2025,
+        17.69
+      ],
+      [
+        2026,
+        18.17
+      ]
+    ],
+    "unit": {
+      "aum": "$B",
+      "accounts": "M accounts"
+    },
+    "source": "The 529 Network, The Modern Record dataset (Q2 2026)"
+  },
+  "modern_record": [
+    {
+      "id": "mr-total-aum",
+      "headline": "$653B",
+      "approved_statement": "Nationwide, 529 accounts hold more than $653 billion in assets as of mid-2026.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "BIG NUMBER",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "National total across all state 529 plans.",
+      "chart": ""
+    },
+    {
+      "id": "mr-accounts-18",
+      "headline": "18M+ accounts",
+      "approved_statement": "More than 18 million 529 accounts are open across the country, up from 2.4 million in 2001.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "TREND",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "National totals across all state 529 plans.",
+      "chart": "accounts"
+    },
+    {
+      "id": "mr-growth-48x",
+      "headline": "48x since 2001",
+      "approved_statement": "Nationwide 529 assets have grown from about $13.6 billion in 2001 to more than $653 billion in 2026.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "TREND",
+      "primary_audience": "Media, researchers & policymakers",
+      "primary_cta": "Read / download the report",
+      "qualifier": "National totals across all state 529 plans. Past growth does not predict future returns.",
+      "chart": "aum"
+    },
+    {
+      "id": "mr-decade-doubled",
+      "headline": "More than doubled",
+      "approved_statement": "Nationwide 529 savings have more than doubled in the past decade, from about $253 billion in 2015 to more than $653 billion in 2026.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "2. Proof in Numbers",
+      "template_type": "TREND",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "National totals across all state 529 plans. Past growth does not predict future returns.",
+      "chart": "aum"
+    },
+    {
+      "id": "mr-resilience",
+      "headline": "Saving through every cycle",
+      "approved_statement": "Through market ups and downs, families kept saving. Nationwide 529 assets recovered after 2008 and 2022 to reach new highs by 2026.",
+      "source": "The 529 Network, The Modern Record dataset (Q2 2026)",
+      "pillar": "1. 529 Made Simple",
+      "template_type": "TREND",
+      "primary_audience": "Parents & caregivers",
+      "primary_cta": "Find your state plan",
+      "qualifier": "Illustrates long-term national totals, not investment advice or expected returns.",
+      "chart": "aum"
+    }
   ]
 }

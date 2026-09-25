@@ -255,6 +255,52 @@ def render(spec: dict) -> Image.Image:
         _source_and_cta(d, spec, pad, bottom, max_w, soft, W)
         return img
 
+
+    # TREND (line/area chart from a national series)
+    if "TREND" in tt and spec.get("series"):
+        series = [(int(x), float(y)) for x, y in spec["series"] if y is not None]
+        unit = spec.get("series_unit", "")
+        area = C["mist"]
+        line_col = C["white"] if theme == "green" else C["green"]
+        dot_col = C["white"] if theme == "green" else C["green_deep"]
+        # title
+        hl = str(spec.get("headline", ""))
+        hf = _fit_single(d, hl, "black", max_w, int(W*(.13 if not landscape else .085)), 30)
+        d.text((pad, top), hl, font=hf, fill=main)
+        title_h = hf.getbbox("Ag")[3]-hf.getbbox("Ag")[1]
+        # plot area
+        px0, px1 = pad, W - pad
+        py0 = top + title_h + int(H*.05)
+        py1 = bottom - reserved - int(H*.05)
+        xs = [p[0] for p in series]; ys = [p[1] for p in series]
+        xmin, xmax = min(xs), max(xs); ymax = max(ys) * 1.12 or 1
+        def X(x): return px0 + (px1-px0) * ((x-xmin)/(xmax-xmin) if xmax > xmin else 0)
+        def Y(y): return py1 - (py1-py0) * (y/ymax)
+        pts = [(X(x), Y(y)) for x, y in series]
+        # baseline area
+        poly = pts + [(pts[-1][0], py1), (pts[0][0], py1)]
+        d.polygon(poly, fill=area)
+        d.line(pts, fill=line_col, width=max(4, int(W*.010)), joint="curve")
+        # endpoint marker + label
+        ex, ey = pts[-1]; r = max(7, int(W*.012))
+        d.ellipse([ex-r, ey-r, ex+r, ey+r], fill=dot_col)
+        def vlabel(v):
+            if unit.startswith("$"):
+                return f"${v:g}B"
+            if "account" in unit.lower():
+                return f"{v:g}M"
+            return f"{v:g} {unit}".strip()
+        endlbl = vlabel(ys[-1])
+        ef = font("black", int(W*.045))
+        ew = d.textlength(endlbl, font=ef)
+        d.text((min(ex - ew, px1 - ew), ey - int(H*.065)), endlbl, font=ef, fill=main)
+        # year axis labels
+        yf = font("bold", int(W*.024))
+        d.text((px0, py1 + int(H*.006)), str(xmin), font=yf, fill=soft)
+        lastlbl = str(xmax); d.text((px1 - d.textlength(lastlbl, font=yf), py1 + int(H*.006)), lastlbl, font=yf, fill=soft)
+        _source_and_cta(d, spec, pad, bottom, max_w, soft, W)
+        return img
+
     # BIG NUMBER (default), vertically balanced
     hl = str(spec.get("headline", ""))
     hf = _fit_single(d, hl, "black", max_w, int(W*(.28 if not landscape else .15)), 34)

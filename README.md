@@ -24,6 +24,8 @@ Bundled Compendium facts are imported as controlled approved copy. The determini
 
 The known `$439M` / `$413M` tax-savings discrepancy remains visible in the Content Library. The approved social wording is not silently reconciled or rewritten.
 
+The **Fact Bank** now also carries national **Modern Record** trend facts (assets and accounts, 2001 to Q2 2026) drawn from the 529assets dataset, and **Design Studio / Create** can render an on-brand **TREND** area chart for them. National aggregates only, attributed to The 529 Network.
+
 ## Run locally
 
 ```bash

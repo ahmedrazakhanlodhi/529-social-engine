@@ -101,6 +101,11 @@ def make_graphic_bytes(fact: dict, size_name: str, graphic_text: str | None = No
     }
     if photo is not None:
         spec["photo"] = photo
+    chart = f.get("chart") or ("aum" if "TREND" in f["template_type"].upper() else "")
+    if chart:
+        ts = DATA.get("trend_series", {})
+        spec["series"] = ts.get(f"{chart}_by_year", [])
+        spec["series_unit"] = ts.get("unit", {}).get(chart, "")
     if "MYTH" in f["template_type"].upper():
         spec["myth_text"] = "“I need a lot of money to start.”"
     if "ACCESS" in f["template_type"].upper():
